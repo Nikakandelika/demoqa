@@ -3,21 +3,20 @@ from selenium.common.exceptions import NoSuchElementException
 from components.components import WebElement
 
 #храним атрибуты как элементы на странице
+
 class Demoqa(BasePage):
 
     def __init__(self, driver):
-        self.base_url = 'https://demoqa.com/elements'
-
+        self.base_url = 'https://demoqa.com/'
         super().__init__(driver, self.base_url)
 
         self.pageData = {
-            'title': 'DEMOQA'
+            "title": "DEMOQA"
         }
 
         self.icon = WebElement(driver, '#app > header > a')
         self.btn_elements = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)' )
-        self.text_footer = WebElement(driver, '#app > footer > span')
-
+        self.footer_text = WebElement(driver, '#app > footer > span')
     # def exist_icon(self):
     #     try:
     #         self.icon.find_element()
@@ -35,3 +34,7 @@ class Demoqa(BasePage):
     #    if self.get_url() == self.base_url():
     #        return True
     #    return False
+
+
+class DemoQa:
+    pass
