@@ -1,6 +1,4 @@
-import time
 
-from conftest import browser
 from page.elements_page import ElementsPage
 from page.demoqa import Demoqa
 
